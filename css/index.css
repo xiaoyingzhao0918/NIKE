@@ -1,0 +1,448 @@
+*{margin: 0; padding: 0;}
+html,body{height: 100%;}
+body{font-family:'宋体';text-align:center;margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;min-height: 2000px;}
+body > div{text-align:center;margin-right:auto;margin-left:auto;}
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none}
+table,td,input{font-size:12px}
+a{outline-style:none;color:#333;text-decoration:none}
+
+/******************顶部设计*****************************/
+header{
+	width: 100%;
+	height: 110px;
+	margin: 0 auto;
+	position: -webkit-sticky;
+	background: #fff;
+	position:fixed;top: 0;
+	z-index: 99;
+}
+/************最顶部**************/
+.top{
+	width: 100%;
+	height: 38px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+}
+.top .left li{
+	float: left;
+	width: 114px;
+	height: 100%;
+	line-height: 38px;
+	border-right: 1px solid #ddd;
+}
+.top .left li a{
+	color: #8d8d8d;
+}
+
+.top .right>li {
+	float: left;
+	line-height: 38px;
+	padding:0 10px;
+	font-size: 10px;
+}
+.top .right>li a{
+	color: #8d8d8d;
+}
+.top .right>li a:hover{
+	color: #000;
+}
+.top .right>li a .china{
+	color: #f00;
+}
+.top .right .help{
+	position: relative;
+	z-index: 8;
+}
+.top .right .help:hover{
+	border-bottom: 2px solid #000;
+}
+.top .right .help ul{
+	width:70px;
+	border:1px solid #ddd;
+	padding: 20px;
+	position: absolute;
+	left: -30px;
+	top: 40px;
+	display: none;
+	background: #fff;
+}
+.top .right .help ul li{
+	line-height: 24px;
+}
+.top .right .help:hover ul{
+	display: block;
+}
+.top .right .help ul a{
+	color: #000000;
+}
+.top .right .help a:hover{
+	color: #ddd;
+}
+
+/************顶部导航区********/
+.nav{
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+.nav .logo{
+	float: left;
+	margin: 0 10px;
+}
+
+.nav .list{
+	float: left;
+	margin-left: 20%;
+	line-height: 70px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.nav .list>li{
+	float: left;
+	padding: 0 20px;	
+}
+.nav .list>li:hover{	
+	border-bottom: 2px solid #000;
+}
+.nav .list .list2-wrap{
+	width:100%;
+	padding: 30px 0;
+	display: block;
+	position: absolute;
+	left: 0;top:71px ;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	display:flex ;
+	justify-content: center;
+}
+.nav .list .list2-wrap>div{
+	border-right: 1px solid #ddd;
+	padding:0 40px;
+	text-align: left;
+}
+
+.nav .list .list2-wrap .newPro li{
+	line-height:30px;
+	font-size: 16px;
+}
+.nav .list .list2-wrap h4{
+	line-height: 30px;
+	font-size: 16px;
+}
+.nav .list .list2-wrap li{
+	line-height: 24px;
+	font-size: 13px;
+}
+.nav .list .list2-wrap ul{
+	float: left;
+	margin:0 20px;	
+}
+
+/************表单搜索********/
+.nav form{
+	width: 200px;
+	height:40px;
+	float: right;
+	border: 1px solid #ddd;
+	margin:15px 20px;
+}
+.nav>form .iconfont{
+	display: inline-block;
+	width: 40px;
+	height:40px;
+	float: left;
+	line-height: 40px;
+	text-align: center;
+}
+.nav>form .search{
+	float: left;
+	border: none;
+	color: #ddd;
+	width: 160px;
+	height: 100%;
+}
+
+
+/**********************8*提示区**************************************8*/
+.tip{
+	width: 100%;
+	height: 60px;
+	margin-top: 110px;
+	background: #f7f7f7;
+	border-bottom:1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+.tip .tip-content{
+	width:25%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.tip p{
+	text-align: center;
+	width: 250px;
+	height: 100%;
+	float: left;
+	line-height: 20px;
+	margin: 0 10px;
+}
+.tip a{
+	display:block;
+	width: 50px;
+	height: 100%;
+	float: right;
+	line-height: 60px;
+	text-decoration:underline;
+}
+
+/*********************************主体区****************************/
+.main{
+	width: 100%;
+	min-height:2700px ;
+}
+
+/***********左边菜单*************/
+.main aside{
+	width: 20%;
+	float: left;
+	position:sticky;  /*使用前提是父元素不能设置overflow:hidden;否则无效*/
+	top: 0; /*页面向上卷动,当卷动到aside离页面顶部为0时(相对可视窗口进行定位),aside变为固定定位fixed,当页面再向上卷动时,aside保持不动。
+	当页面向上卷动到父元素main的底部时，aside开始向上卷动*/
+}
+.aside-wrap{
+	box-sizing: border-box;
+	width: 100%;
+	padding:90px 30px 0 30px;	
+	text-align: left;
+	font-family: "微软雅黑";	
+}
+aside .sex{
+	height:160px;
+	border-top:1px solid #ddd ;	
+}
+aside .shoes{
+	border-top:1px solid #ddd ;	
+}
+aside h4{
+	height: 42px;
+	line-height:64px;
+	font-weight: bold;
+	font-size: 14px;
+}
+aside li{
+	text-indent: 14px;
+	line-height:24px;
+}
+
+
+/**************右边主体区****************/
+article{
+	width: 80%;
+	float: right;	
+}
+/*****banner部分******/
+article .swiper-container{
+	width: 100%;
+	height: 350px;
+}
+.swiper-wrapper .swiper-slide img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/**************瀑布流**********/
+.container{
+	box-sizing: border-box;
+	width: 100%;
+	padding-right:5%;
+}
+/*标题*/
+.container .product{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.container .product h1{
+	line-height: 100px;
+	font-weight: bold;
+	font-size:20px;
+}
+.container .product h1 span{
+	color:#999 ;
+}
+.container .product .sort{
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	margin: 30px 0;
+	border: 1px solid #ddd;
+	position: relative;
+}
+.container .product .sort ul{
+	width: 130px;
+	padding: 20px;
+	text-align: left;
+	line-height:24px ;
+	border: 1px solid #ddd;
+	position: absolute;
+	right: 0;
+	top: 30px;
+	z-index: 9;
+	background: #fff;
+	display: block;
+}
+.container .product .sort .iconfont{
+	font-weight: bold;
+	font-size: 12px;
+}
+/****商品瀑布流*******/
+.container .content{
+	width: 100%;
+	min-height: 500px;
+	position: relative;
+}
+.container .content::after{
+	content: "";
+	display: block;
+	clear: both;
+} 
+.content .box{
+	width: 240px;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 10px;
+	margin:10px 1px 10px 1px;
+	float: left;
+	transition:100;
+}
+.content .box:hover{
+	box-shadow:0 0 2px #000000 ;
+}
+.content .box .box-img{
+	width: 100%;
+	overflow: hidden;
+}
+.content .box .color{
+	width: 100%;
+	height:22px;
+	line-height: 22px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+	color: #000;
+}
+.content .box .detail{
+	width: 100%;
+	text-align: left;
+	color:#666 ;
+} 
+.content .box .detail h4{
+	color: #000;
+}
+
+
+
+
+/************************底部********************************/
+/*关注我们*/
+.focus{
+	width: 100%;
+	height: 220px;
+	margin-top: 20px;
+	background: url(../img/focus.jpg) no-repeat;
+	background-size:cover;
+	position: relative;
+}
+.focus h1{
+	font-size: 30px;
+	color: #222;
+	line-height: 80px;
+	font-family: "微软雅黑";
+}
+.focus p{
+	font-size: 14px;
+	color: #8D8D8D;
+}
+.focus div{
+	position: absolute;
+	bottom:20px ;
+	left: 0;right: 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+.focus div span{
+	margin: 0 8px;
+}
+
+footer{
+	width: 100%;
+	height: 300px;
+	background: #191919;
+}
+.footer-container{
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+.footer-container .connect{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom:40px;
+	border-bottom:1px solid #ddd ;
+}
+.connect .connect-list ul{
+	float: left;
+	margin-right: 70px;
+	text-align: left;
+}
+.connect .connect-list ul li{
+	line-height: 26px;
+	font-size: 12px;	
+}
+.connect .connect-list ul li a{
+	color: #999;
+}
+.connect i .iconfont{
+	font-size: 25px;
+}
+
+.banquan{
+	color: #999;
+}
+.banquan>div{
+	display: flex;
+	justify-content: space-between;
+}
+.banquan>div p{
+	color: #f0f0c5;
+	font-size: 12px;	
+}
+.banquan>div p span{
+	color: #999;
+	font-size: 8px;
+	margin:0 5px;
+}
+.banquan>div p .iconfont{
+	color: #F00;
+	font-size: 20px;
+}
+.banquan>div ul li{
+	float: left;
+	margin-right:22px ;
+	font-size: 8px;
+	color: #999;
+	line-height:28px;
+}
+.banquan>p{
+	text-align: right;
+	line-height:30px;
+}

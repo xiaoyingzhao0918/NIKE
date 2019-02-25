@@ -1,0 +1,227 @@
+
+body{
+	height: 100%;
+	min-height: 1000px;
+}
+.mag-wrap{
+	width: 100%;
+	min-height:800px;
+}
+/*左边放大镜*/
+.magnifier{
+	padding: 50px;
+	width: 602px;
+	position: relative;
+	float: left;
+	margin-left:50px;
+}
+.wrap-small{
+	position: relative;
+	width: 600px;
+	height: 600px;
+	border: 1px solid #ccc;
+}
+.wrap-small .patch{    /*贴膜*/
+	width:100%;height:100%;
+	position:absolute;left:0;top:0;
+	z-index:999;
+}
+.wrap-small .focus{
+	box-sizing: border-box;
+	width: 300px;
+	height: 300px;
+	margin-top:0;
+	background: #fede4f;
+	opacity:0.5;
+	position: absolute;
+	left: 0;top: 0;z-index: 10;
+	display:none ;
+}  
+.wrap-small img{
+	width: 100%;
+	height: 100%;
+}
+.wrap-choose{
+	margin-top: 15px;
+	margin-left: 0;	
+}	
+.wrap-choose li{
+	display: inline-block;
+	margin-left: 10px;
+	border: 2px solid #fff;
+	padding: 5px;
+}
+.wrap-choose li:hover{
+	border: 2px solid #f10;
+}
+.wrap-big{
+	box-sizing: border-box;
+	width:500px;
+	height:500px;
+	border: 1px solid #ddd;
+	position: absolute;
+	left:652px;top: 50px;
+	overflow: hidden;
+	display: none;
+}
+.wrap-big img{
+	position:absolute;
+	left: 0;
+	top: 0;
+}
+
+/*右边商品说明*/
+.sale-detail{
+	width:400px;
+	float: right;
+	padding-top:50px ;
+	margin-right:100px ;
+	text-align: left;
+}
+.sale-detail>div{
+	border-bottom: 1px solid #ddd;
+	padding-bottom:20px ;
+}
+.sale-detail>div:nth-child(1) h1{
+	font-size: 26px;
+	font-family: "微软雅黑";
+	line-height: 42px;
+}
+.sale-detail>div:nth-child(1) i{
+	font-size: 16px;
+	color: #999999;
+}
+.sale-detail>div:nth-child(1) span{
+	display: block;
+	font-size: 18px;	
+}
+.detail-two{
+	color: #999;
+}
+.detail-two p:nth-child(1){
+	line-height:40px;
+	display: flex;
+	justify-content: space-between;
+}
+.detail-two p:nth-child(2) img{
+	border: 2px solid #ddd;
+}
+.detail-two>div{
+	width:100% ;
+	padding: 10px 10px 20px 10px;
+	background: #F5F5F5;
+	border-radius: 5px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	margin: 10px 0 30px 0;
+}
+.detail-two>div h4{
+	font-size: 14px;
+	line-height:26px;	
+}
+
+.detail-two>i span{
+	display: inline-block;
+	width: 190px;
+	height: 40px;
+	margin:5px;
+	background:#DF5000;
+	border-radius: 6px;
+	font-size: 15px;
+	line-height: 40px;
+	font-style: normal;
+	text-align: center;
+	color: #fff;
+	font-family: "微软雅黑";
+} 
+.detail-two>i span:nth-child(1){
+	background: #D3D3D3;
+	color: #666;
+}
+.detail-thr{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 20px;
+}
+.detail-thr p:nth-child(1){
+	font-size: 12px;
+	line-height: 24px;
+}
+.detail-thr h4{
+	line-height: 30px;
+}
+
+
+
+/*推荐产品*/
+.introduce{
+	width: 100%;
+	height:450px;
+}
+.introduce h1{
+	font-size: 35px;
+	line-height:90px;
+	font-family: "微软雅黑";
+}
+
+/*推荐商品瀑布流*/
+.introduce .swiper-container{
+	width: 80%;
+	height:320px ;
+	margin: 0 auto;
+	position: relative;
+}
+.introduce .like-content{
+	width: 1060px;
+	height: 100%;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+	display: flex;
+	padding-left:20px ;
+	position: absolute;
+	left: 8px;top: 0;
+}
+
+.like-content .box{
+	width: 240px;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 10px;
+	margin:10px;
+	float: left;
+	transition:100;
+}
+.like-content .box:hover{
+	box-shadow:0 0 2px #000000 ;
+}
+.like-content .box .box-img{
+	width: 100%;
+	overflow: hidden;
+}
+.like-content .box .color{
+	width: 100%;
+	height:22px;
+	line-height: 22px;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+	color: #000;
+}
+.like-content .box .detail{
+	width: 100%;
+	text-align: left;
+	color:#666 ;
+} 
+.like-content .box .detail h4{
+	color: #000;
+}
+
+.introduce .swiper-button-next:hover{
+	cursor: pointer;
+}
+.introduce .swiper-button-prev:hover{
+	cursor: pointer;
+}
+
+
+
